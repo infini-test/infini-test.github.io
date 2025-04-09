@@ -146,32 +146,7 @@
     }
 
 
-    #project_structure {
-        width: 300px;
-        height: 1200px;
-        overflow-y: auto;
-        font-family: Arial, sans-serif;
-        background: red;
-    }
 
-    #project_structure ul {
-        list-style-type: none;
-        padding-left: 20px;
-    }
-
-    #project_structure li {
-        cursor: pointer;
-        padding: 5px 0;
-    }
-
-    #project_structure li:hover {
-        background-color: #f0f0f0;
-    }
-
-    .tree-toggle {
-        margin-right: 5px;
-        cursor: pointer;
-    }
 
 </style>
 </head>
@@ -24497,181 +24472,125 @@ watcher.stop(device)
     }
 
 
-    //
-    // // 将 JSON 数据转换为 ECharts 所需的树形结构
-    // function convertToTreeData(data) {
-    //     const root = {
-    //         name: 'customLib',
-    //         children: []
-    //     };
-    //
-    //     function processNode(currentNode, data) {
-    //         for (const key in data) {
-    //             if (data[key].type === 'file') {
-    //                 currentNode.children.push({
-    //                     name: key,
-    //                     value: data[key].path
-    //                 });
-    //             } else if (typeof data[key] === 'object') {
-    //                 const newNode = {
-    //                     name: key,
-    //                     children: []
-    //                 };
-    //                 currentNode.children.push(newNode);
-    //                 processNode(newNode, data[key]);
-    //             }
-    //         }
-    //     }
-    //
-    //     processNode(root, data.customLib);
-    //     return root;
-    // }
-    //
-    // // 初始化 ECharts 实例
-    // // const chartDom = document.createElement('div');
-    // const chartDom = document.getElementById('project_structure');
-    // chartDom.style.width = '600px';
-    // chartDom.style.height =  '1200px';
-    // // document.body.appendChild(chartDom);
-    // const myChart = echarts.init(chartDom);
-    //
-    //
-    // const option = {
-    //     tooltip: {
-    //         trigger: 'item',
-    //         triggerOn: 'mousemove'
-    //     },
-    //     series: [
-    //         {
-    //             type: 'tree',
-    //             id: 0,
-    //             name: 'tree1',
-    //             data:  [convertToTreeData(jsonData)],
-    //             top: '0%',
-    //             left: '0%',
-    //             bottom: '0%',
-    //             right: '50%',
-    //             symbolSize: 7,
-    //             edgeShape: 'curve',
-    //             edgeForkPosition: '45%',
-    //             initialTreeDepth: 3,
-    //             lineStyle: {
-    //                 width: 1,
-    //                 color: '#666',
-    //                 curveness: 0.8 // 增加 curveness 值，使线条变为折线
-    //             },
-    //             // layout: {
-    //             //   verticalGap: 30, // 减小垂直间距
-    //             //   horizontalGap: 15 // 减小水平间距
-    //             // },
-    //             label: {
-    //                 backgroundColor: '#fff',
-    //                 position: 'left',
-    //                 verticalAlign: 'middle',
-    //                 align: 'right',
-    //                 color: '#000000', // 设置字体颜色为蓝色
-    //                 show: true, // 默认显示标签
-    //                 formatter: function (params) {
-    //                     // 如果是根节点，返回空字符串
-    //                     if (params.name === 'customLib') {
-    //                         return '';
-    //                     }
-    //                     return params.name;
-    //                 }
-    //
-    //
-    //             },
-    //             leaves: {
-    //                 label: {
-    //                     position: 'right',
-    //                     verticalAlign: 'left',
-    //                     align: 'left',
-    //                     fontSize: 12, // 调整叶子节点字体大
-    //                 }
-    //             },
-    //             emphasis: {
-    //                 focus: 'ancestor',
-    //             },
-    //
-    //             expandAndCollapse: false,
-    //             animationDuration: 0,
-    //             animationDurationUpdate: 0
-    //         }
-    //     ]
-    // };
-    //
-    // // 渲染图表
-    // myChart.setOption(option);
-    //
-    //
-    // // 监听节点点击事件
-    // myChart.on('click', function (params) {
-    //     // 判断是否为叶子节点
-    //     if (params.data.children === undefined || params.data.children.length === 0) {
-    //         console.log('点击了叶子节点:', params.name);
-    //         // 在这里添加你的点击处理逻辑
-    //         scrollToId(params.name)
-    //         // alert('点击了叶子节点: ' + params.name);
-    //     }
-    // });
-    //
-    // function scrollToId(id,offset=60) {
-    //     try {
-    //         const element = document.getElementById(id);
-    //         if (!element) {
-    //             console.warn(`未找到ID为 ${id} 的元素`);
-    //             return;
-    //         }
-    //         const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
-    //
-    //         // 计算目标滚动位置
-    //         const targetPosition = elementTop - offset;
-    //
-    //         window.scrollTo({
-    //             top: targetPosition,
-    //             behavior: 'smooth'
-    //         });
-    //
-    //
-    //     } catch (error) {
-    //         console.error('滚动时发生错误:', error);
-    //     }
-    // }
 
-    function createTreeElement(data, parentElement) {
-        const ul = document.createElement('ul');
-        for (const key in data) {
-            const li = document.createElement('li');
-            if (data[key].type === 'file') {
-                li.textContent = key;
-                li.addEventListener('click', () => scrollToId(key));
-            } else if (typeof data[key] === 'object') {
-                li.textContent = key;
-                const span = document.createElement('span');
-                span.textContent = '▶';
-                span.classList.add('tree-toggle');
-                li.prepend(span);
-                createTreeElement(data[key], li);
-                span.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const childUl = li.querySelector('ul');
-                    if (childUl) {
-                        childUl.style.display = childUl.style.display === 'none' ? 'block' : 'none';
-                        span.textContent = childUl.style.display === 'none' ? '▶' : '▼';
-                    }
-                });
+    // 将 JSON 数据转换为 ECharts 所需的树形结构
+    function convertToTreeData(data) {
+        const root = {
+            name: 'customLib',
+            children: []
+        };
+
+        function processNode(currentNode, data) {
+            for (const key in data) {
+                if (data[key].type === 'file') {
+                    currentNode.children.push({
+                        name: key,
+                        value: data[key].path
+                    });
+                } else if (typeof data[key] === 'object') {
+                    const newNode = {
+                        name: key,
+                        children: []
+                    };
+                    currentNode.children.push(newNode);
+                    processNode(newNode, data[key]);
+                }
             }
-            ul.appendChild(li);
         }
-        parentElement.appendChild(ul);
+
+        processNode(root, data.customLib);
+        return root;
     }
 
-    // 初始化树形结构
-    const treeContainer = document.getElementById('project_structure');
-    createTreeElement(jsonData.customLib, treeContainer);
+    // 初始化 ECharts 实例
+    // const chartDom = document.createElement('div');
+    const chartDom = document.getElementById('project_structure');
+    chartDom.style.width = '600px';
+    chartDom.style.height =  '1200px';
+    // document.body.appendChild(chartDom);
+    const myChart = echarts.init(chartDom);
 
-    // 滚动到指定ID
-    function scrollToId(id, offset = 60) {
+
+    const option = {
+        tooltip: {
+            trigger: 'item',
+            triggerOn: 'mousemove'
+        },
+        series: [
+            {
+                type: 'tree',
+                id: 0,
+                name: 'tree1',
+                data:  [convertToTreeData(jsonData)],
+                top: '0%',
+                left: '0%',
+                bottom: '0%',
+                right: '50%',
+                symbolSize: 7,
+                edgeShape: 'curve',
+                edgeForkPosition: '45%',
+                initialTreeDepth: 3,
+                lineStyle: {
+                    width: 1,
+                    color: '#666',
+                    curveness: 0.8 // 增加 curveness 值，使线条变为折线
+                },
+                // layout: {
+                //   verticalGap: 30, // 减小垂直间距
+                //   horizontalGap: 15 // 减小水平间距
+                // },
+                label: {
+                    backgroundColor: '#fff',
+                    position: 'left',
+                    verticalAlign: 'middle',
+                    align: 'right',
+                    color: '#000000', // 设置字体颜色为蓝色
+                    show: true, // 默认显示标签
+                    formatter: function (params) {
+                        // 如果是根节点，返回空字符串
+                        if (params.name === 'customLib') {
+                            return '';
+                        }
+                        return params.name;
+                    }
+
+
+                },
+                leaves: {
+                    label: {
+                        position: 'right',
+                        verticalAlign: 'left',
+                        align: 'left',
+                        fontSize: 12, // 调整叶子节点字体大
+                    }
+                },
+                emphasis: {
+                    focus: 'ancestor',
+                },
+
+                expandAndCollapse: false,
+                animationDuration: 0,
+                animationDurationUpdate: 0
+            }
+        ]
+    };
+
+    // 渲染图表
+    myChart.setOption(option);
+
+
+    // 监听节点点击事件
+    myChart.on('click', function (params) {
+        // 判断是否为叶子节点
+        if (params.data.children === undefined || params.data.children.length === 0) {
+            console.log('点击了叶子节点:', params.name);
+            // 在这里添加你的点击处理逻辑
+            scrollToId(params.name)
+            // alert('点击了叶子节点: ' + params.name);
+        }
+    });
+
+    function scrollToId(id,offset=60) {
         try {
             const element = document.getElementById(id);
             if (!element) {
@@ -24679,15 +24598,22 @@ watcher.stop(device)
                 return;
             }
             const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+
+            // 计算目标滚动位置
             const targetPosition = elementTop - offset;
+
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
             });
+
+
         } catch (error) {
             console.error('滚动时发生错误:', error);
         }
     }
+
+
 
 </script>
 
