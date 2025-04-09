@@ -79,22 +79,57 @@ body {
 }
 .header-nav a:hover{
     /*background-color: #f6c00e;*/
-    background-color: orange;
+    /*background-color: orange;*/
     cursor: pointer;
 }
 
 
 
-.api-class-container{
-    display: inline-block;
+#project_structure {
+    width: 300px;
     height: calc(100vh - 80px);
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
+    /*background: red;*/
     overflow-y: auto;
     position: fixed;
     top: 50px;
     left: 5px;
-    width: 500px;
+    /*width: 500px;*/
     overflow-x: hidden;
     scrollbar-width: thin;
+}
+
+#project_structure ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#project_structure li {
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+#project_structure li:hover {
+    /*background-color: #f0f0f0;*/
+}
+
+.tree-toggle {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+
+.api-class-container{
+    display: inline-block;
+    /*height: calc(100vh - 80px);*/
+    /*overflow-y: auto;*/
+    /*position: fixed;*/
+    /*top: 50px;*/
+    /*left: 5px;*/
+    /*!*width: 500px;*!*/
+    /*overflow-x: hidden;*/
+    /*scrollbar-width: thin;*/
     /*background-color: red;*/
 }
 .api-class-container li{
@@ -119,7 +154,7 @@ body {
 }
 
 .api_class_name:hover {
-    background: #e9ecef;
+    /*background: #e9ecef;*/
     transform: translateX(5px);
     font-weight: bolder;
 }
@@ -141,7 +176,7 @@ body {
 
 .api-detail{
     /*width: 900px;*/
-    width: calc(100vw - 600px);;
+    width: calc(100vw - 400px);;
     /*padding-left: 160px;*/
     padding-top:40px;
     /*background-color: blue;*/

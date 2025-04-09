@@ -146,32 +146,6 @@
     }
 
 
-    #project_structure {
-        width: 300px;
-        height: 1200px;
-        overflow-y: auto;
-        font-family: Arial, sans-serif;
-        background: red;
-    }
-
-    #project_structure ul {
-        list-style-type: none;
-        padding-left: 20px;
-    }
-
-    #project_structure li {
-        cursor: pointer;
-        padding: 5px 0;
-    }
-
-    #project_structure li:hover {
-        background-color: #f0f0f0;
-    }
-
-    .tree-toggle {
-        margin-right: 5px;
-        cursor: pointer;
-    }
 
 </style>
 </head>
@@ -193,12 +167,13 @@
     </nav>
 
     <div class="api-class-container">
-        <div class="class_list" id="class_list">
+<!--        <div class="class_list" id="class_list">-->
+
+<!--        </div>-->
+        <div class="project_structure" id="project_structure">
 
         </div>
-        <div class="project_structure" id="project_structure" style="background: None;">
 
-        </div>
     </div>
 
 
@@ -24645,10 +24620,25 @@ watcher.stop(device)
             if (data[key].type === 'file') {
                 li.textContent = key;
                 li.addEventListener('click', () => scrollToId(key));
+                // 添加叶子节点悬停效果
+                li.addEventListener('mouseenter', () => {
+                    li.style.transform = 'scale(1.05)';
+                    li.style.transition = 'transform 0.2s ease';
+                    // li.style.backgroundColor = '#f0f0f0'; // 仅对当前叶子节点设置背景色
+                    li.style.color = '#000000'; // 仅对当前叶子节点设置背景色
+                    li.style.fontWeight = 'bolder';
+                });
+                li.addEventListener('mouseleave', () => {
+                    li.style.transform = 'scale(1)';
+                    li.style.backgroundColor = ''; // 移除背景色
+                    li.style.color = ''; // 仅对当前叶子节点设置背景色
+                    li.style.fontWeight = 'normal';
+                });
             } else if (typeof data[key] === 'object') {
                 li.textContent = key;
                 const span = document.createElement('span');
-                span.textContent = '▶';
+                // 使用文件夹图标
+                span.innerHTML = '📁';
                 span.classList.add('tree-toggle');
                 li.prepend(span);
                 createTreeElement(data[key], li);
@@ -24657,7 +24647,8 @@ watcher.stop(device)
                     const childUl = li.querySelector('ul');
                     if (childUl) {
                         childUl.style.display = childUl.style.display === 'none' ? 'block' : 'none';
-                        span.textContent = childUl.style.display === 'none' ? '▶' : '▼';
+                        // 切换文件夹图标状态
+                        span.innerHTML = childUl.style.display === 'none' ? '📁' : '📂';
                     }
                 });
             }
@@ -24688,7 +24679,19 @@ watcher.stop(device)
             console.error('滚动时发生错误:', error);
         }
     }
-
+    // li.addEventListener('mouseenter', () => {
+    //     li.style.transform = 'scale(1.05)';
+    //     li.style.transition = 'transform 0.2s ease';
+    //     li.style.backgroundColor = '#f0f0f0'; // 仅对当前叶子节点设置背景色
+    //     li.style.fontWeight = 'bolder'; // 设置字体加粗
+    //     li.style.color = 'black'; // 设置字体颜色为黑色
+    // });
+    // li.addEventListener('mouseleave', () => {
+    //     li.style.transform = 'scale(1)';
+    //     li.style.backgroundColor = ''; // 移除背景色
+    //     li.style.fontWeight = ''; // 移除字体加粗
+    //     li.style.color = ''; // 移除字体颜色设置
+    // });
 </script>
 
 </html>
