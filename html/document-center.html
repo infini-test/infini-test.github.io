@@ -276,7 +276,7 @@
         <li><a href="#图像处理">图像处理</a></li>
       </ul>
       <li><a href="#常见问题">常见问题</a></li>
-      <li><a href="#版本历史">版本历史</a></li>
+<!--      <li><a href="#版本历史">版本历史</a></li>-->
     </ul>
   </aside>
 
@@ -389,5 +389,34 @@
     <p class="copyright">© - 2025 PATAC. All Rights Reserved.</p>
   </footer>
 </body>
+<script>
+    history.pushState({ isBack: true }, '', window.location.href);
+
+    // 监听所有导航链接的点击
+    document.querySelectorAll('.side-nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // 阻止默认的锚点跳转行为
+            e.preventDefault();
+            // 使用replaceState更新当前历史记录
+            history.replaceState({ isBack: true }, '', this.href);
+            // 手动滚动到目标位置
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // 用户返回时触发
+    window.addEventListener('popstate', function(event) {
+        console.log("11111111111111")
+        if (event.state?.isBack) {
+            console.log("222222222222222")
+            // 如果当前页面是通过导航进入的，则返回上一页
+            if (document.referrer && document.referrer.indexOf(window.location.hostname) === -1) {
+                window.location.href = document.referrer;
+            }
+        }
+    });
+</script>
 
 </html>
