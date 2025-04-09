@@ -203,9 +203,17 @@ p{
     line-height: 1.5rem;
 }
 
+a:hover{
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
 
-
-
+a {
+    /*list-style-type: none;*/
+    text-decoration: none;
+    color: gray;
+}
 
 
 h3 {
