@@ -683,6 +683,20 @@
     <section id="contact" class="section">
         <h2 class="section-title"></h2>
     </section>
+<!--    <div class="visit"style="position: fixed; top:0; bottom: 0;">访问量: <span id="finicount_views"></span> </div>-->
+<!--    <span id="finicount_views" style="position: fixed; top:0; bottom: 0;"></span>-->
+
+    <div class="visitiscontainer">
+        <div class="visitsdiv" style="position: fixed; left:15px; bottom: 10px;font-size: 0.8rem;color: gray">
+            <span id="finicount_text">累计访问量:</span><span id="finicount_views"></span>
+        </div>
+<!--        <div class="visitstotaldiv">-->
+<!--            <span id="finicount_text">所有站点总计数:</span><span id="total_views"></span>-->
+<!--        </div>-->
+    </div>
+    </div>
+
+
 
     <footer class="footer">
         <p class="copyright">© - 2025 PATAC. All Rights Reserved.</p>
@@ -692,6 +706,7 @@
 <!--<script src="./js/vue.min.js" type="text/javascript"></script>-->
 <!--<script src="./js/axios.min.js" type="text/javascript"></script>-->
 <!--<script src="./js/elementui-index.js" type="text/javascript"></script>-->
+<script async src="https://finicounter.eu.org/finicounter.js"></script>
 <script>
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
@@ -1160,6 +1175,17 @@
         }, 3000);
     }
     */
+
+    // 监听popstate事件
+    window.addEventListener('popstate', function(event) {
+        // 在这里处理返回按钮点击的逻辑
+        console.log('用户点击了返回按钮');
+        // 你可以在这里执行其他操作，例如更新页面内容或显示提示信息
+    });
+
+    // 如果需要，你可以在页面加载时手动添加一个历史记录条目
+    // 这样在用户点击返回按钮时，popstate事件会被触发
+    history.pushState(null, document.title, location.href);
 
 </script>
 </script>

@@ -390,6 +390,7 @@
   </footer>
 </body>
 <script>
+    // console.log(window.location.href);
     history.pushState({ isBack: true }, '', window.location.href);
 
     // 监听所有导航链接的点击
@@ -409,13 +410,13 @@
     // 用户返回时触发
     window.addEventListener('popstate', function(event) {
         console.log("11111111111111")
-        if (event.state?.isBack) {
-            console.log("222222222222222")
+        // if (event.state?.isBack) {
+            // console.log("222222222222222")
             // 如果当前页面是通过导航进入的，则返回上一页
-            if (document.referrer && document.referrer.indexOf(window.location.hostname) === -1) {
-                window.location.href = document.referrer;
-            }
-        }
+            // if (document.referrer && document.referrer.indexOf(window.location.hostname) === -1) {
+            //     window.location.href = document.referrer;
+            // }
+        // }
     });
 </script>
 
