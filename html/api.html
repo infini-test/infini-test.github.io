@@ -177,10 +177,10 @@
     </nav>
 
     <div class="api-class-container" style="margin-top:100px;color: red;margin-left:20px;">
-        <span style="font-size: 2rem;">API文档正在向飞书平台迁移中，请稍等...</span>
-<!--        <a href="">飞书链接</a>-->
+        <span style="font-size: 2rem;"></span>
+        <a href="https://saic-gm.feishu.cn/drive/folder/DH87fsyULls2brdg6n2cW3B1n3x?from=from_copylink">飞书链接</a>
     </div>
-<!--    <div class="notification" style="background: red;color: black;">API文档已迁移，请前往飞书文档查看: </div>-->
+
 
     <div class="app-footer">
         <div class="copyright-container">
@@ -197,7 +197,21 @@
 
 
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let countdown = 5;
+        const countdownElement = document.querySelector(".api-class-container span");
+        const redirectUrl = "https://saic-gm.feishu.cn/drive/folder/DH87fsyULls2brdg6n2cW3B1n3x?from=from_copylink";
 
+        const interval = setInterval(function() {
+            countdownElement.textContent = `API文档已迁移至飞书平台，页面将在${countdown}秒自动跳转至飞书平台`;
+            countdown--;
+
+            if (countdown < 0) {
+                clearInterval(interval);
+                window.location.href = redirectUrl;
+            }
+        }, 1000);
+    });
 </script>
 
 </html>
