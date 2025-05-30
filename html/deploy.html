@@ -133,6 +133,7 @@
       /*margin: 0 auto;*/
       /*color: red;*/
       box-sizing: border-box;
+      margin-bottom: 10vh;
     }
 
     .steps_containter{
@@ -185,7 +186,7 @@
     .app-footer{
       height: 30px;
       width: 100%;
-      background-color: #eeeeea;
+      /*background-color: #eeeeea;*/
       position: fixed;
       bottom: 0;
       left: 0;
@@ -364,7 +365,7 @@
             <span class="link" style="color: blue;">从RTC上下载最新版本的工具包到本地PC</span></a>
           </li>
           <img src="../resources/images/downlink.png" class= "img_example"></img>
-          <li>确认文件的md5sum值与首页中展示的一致</li>
+          <li>确认文件的md5sum值与 <a href="./release-info.html">首页</a>  中展示的一致</li>
           <img src="../resources/images/md5_check.png" class= "img_example"></img>
         </ul>
 
@@ -386,13 +387,16 @@
 
         <h5 id="step4">4. 申请证书文件</h5>
         <ul>
-          <li>将 <strong style="color: black">#3</strong> 中生成的注册编号文件发送给VCU软件测试团队License管理员 @Li Zhao, @Cheng Jie 生成证书文件license.key</li>
+          <li><strong style="color: red"> 请点击链接在申请表中登记注册编号等申请信息: <a target="_blank" href="https://saic-gm.feishu.cn/base/MMNtbzk0lan2yAsoUI8cHAZQnWg?table=tblyPktILZK9xntw&view=veweM1OE3G"> https://saic-gm.feishu.cn/base/MMNtbzk0lan2yAsoUI8cHAZQnWg?table=tblyPktILZK9xntw&view=veweM1OE3G</a> </strong></li>
+          <img src="../resources/images/feishu_table.png" class= "img_example"></img>
+          <li>管理员在收到生成证书申请的消息后，会尽快将证书文件license.key或其他反馈信息发送至您的邮箱</li>
+<!--          <li>将 <strong style="color: black">#3</strong> 中生成的注册编号文件发送给VCU软件测试团队License管理员 @Li Zhao, @Cheng Jie 生成证书文件license.key</li>-->
 
         </ul>
 
         <h5 id="step5">5. 将证书文件放置到正确位置</h5>
         <ul>
-          <li>将生成的证书文件license.key放置在 <strong style="color: #2980b9">D:\auto_test\automation_cases\</strong> 目录下</li>
+          <li>将管理员发送给您的证书文件license.key放置在 <strong style="color: #2980b9">D:\auto_test\automation_cases\</strong> 目录下</li>
           <img src="../resources/images/license.png" class= "img_example"></img>
 
         </ul>
@@ -417,8 +421,10 @@
 
         <h5 id="step8">8. 在PyCharm中打开automation_cases工程文件夹，配置python解释器路径</h5>
         <ul>
-          <li>在PyCharm中选择 automation_cases 文件夹并打开</li>
+          <li>在PyCharm中选择 D:\auto_test\automation_cases 文件夹并打开</li>
+          <li>请在配置python解释器路径之前，将 <strong style="color: black">D:\auto_test\automation_lib\python-3.12.9-embed-amd64\sitecustomize.py</strong> 重命名为: <strong  style="color: red">sitecustomize.py.bk</strong>  </li>
           <li>在PyCharm中 File > Settings > Python Intepreter 中设置已存在的解释器路径: <strong style="color: red">D:\auto_test\automation_lib\python-3.12.9-embed-amd64\python.exe</strong> </li>
+          <li>最后将 <strong style="color: black">D:\auto_test\automation_lib\python-3.12.9-embed-amd64\sitecustomize.py.bk</strong> 恢复原名: <strong  style="color: red">sitecustomize.py</strong> </li>
           <img src="../resources/images/python_intepreter.png" class= "img_example"></img>
 
         </ul>
@@ -441,8 +447,9 @@
 
         <h5 id="step11">11. 启动车机</h5>
         <ul>
-          <li>选择 automation_cases/StartServer.py 运行，启动can总线相关的服务</li>
-          <li>将 automation_cases/Boot.py 代码中总线VIN相关的行的代码注释掉，然后运行该脚本，VCU会被唤醒起来，数秒后屏幕会被点亮，且最终PowerMode=Run/Propulsion (如需要使用到总线VIN，需要将此处N配置为实际的VIN值，否则会Theft Lock)</li>
+          <li>台架所有接线连接正确条件下，对VCU通电</li>
+          <li>运行 automation_cases/StartServer.py 脚本，启动can总线相关的服务</li>
+          <li>将 automation_cases/Boot.py 脚本中与总线VIN相关的行的代码注释掉，然后运行该脚本，VCU会被唤醒起来，数秒后屏幕会被点亮，且最终PowerMode=Run/Propulsion (如需要使用到总线VIN，需要将此处配置为实际的VIN值，否则会Theft Lock)</li>
           <img src="../resources/images/comment_vin.png" class= "img_example"></img>
           <li>完成以上所有步骤后，可满足最基本的让台架持续处于正常运行状态的需求</li>
 
@@ -472,7 +479,7 @@ SERIAL_LOG = False  # code is in charge of recording serial log, avoid using put
 
           请根据PowerCycle测试文档熟悉各配置项的含义，正确完成配置
 
-          <li>上述配置完成后，选择 automation_cases/cases/power_cycle_test/00PowerCycle.py 文件并运行，可开启 str/cold 循环测试</li>
+          <li>上述配置完成后，选择 automation_cases/cases/power_cycle_test/00PowerCycle.py 文件并运行，可开启 str/cold/pullback 循环测试</li>
 
         </ul>
 

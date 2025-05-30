@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infinitest · 极测无界 | 首页</title>
     <link rel="stylesheet" type="text/css" href="./css/animate.css" />
-<!--    <link rel="stylesheet" type="text/css" href="./css/animate.css" />-->
-<!--    <link rel="stylesheet" type="text/css" href="./css/elementui-index.css" />-->
+    <!--    <link rel="stylesheet" type="text/css" href="./css/animate.css" />-->
+    <!--    <link rel="stylesheet" type="text/css" href="./css/elementui-index.css" />-->
     <style>
         :root {
             --apple-black: #1d1d1f;
@@ -16,21 +16,21 @@
             --apple-blue: #0066cc;
             --apple-white: #ffffff;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-        
+
         body {
             background-color: var(--apple-white);
             color: var(--apple-black);
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
         }
-        
+
         .navbar {
             background-color: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(20px);
@@ -47,20 +47,20 @@
             z-index: 999;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
-        
+
         .nav-logo {
             font-size: 21px;
             font-weight: 500;
             color: var(--apple-black);
             text-decoration: none;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 30px;
             align-items: center;
         }
-        
+
         .nav-link {
             color: var(--apple-black);
             text-decoration: none;
@@ -68,7 +68,7 @@
             font-weight: 400;
             transition: opacity 0.3s;
         }
-        
+
         .nav-link:hover {
             opacity: 0.7;
         }
@@ -141,7 +141,7 @@
         .slide.prev {
             left: -100%;  /* 上一张幻灯片移动到左侧 */
         }
-        
+
         .hero {
             min-height: 100vh;
             display: flex;
@@ -160,7 +160,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero h1 {
             font-size: 80px;
             font-weight: 600;
@@ -173,7 +173,7 @@
             color: var(--apple-white);
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        
+
         .hero p {
             font-size: 28px;
             color: var(--apple-gray);
@@ -186,19 +186,19 @@
             color: var(--apple-white);
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
-        
+
         .hero-links {
             display: flex;
             gap: 20px;
         }
-        
+
         .hero-link {
             color: var(--apple-white);
             text-decoration: none;
             font-size: 21px;
             position: relative;
         }
-        
+
         .hero-link:after {
             content: "";
             position: absolute;
@@ -211,66 +211,66 @@
             transform-origin: right;
             transition: transform 0.3s ease;
         }
-        
+
         .hero-link:hover:after {
             transform: scaleX(1);
             transform-origin: left;
             color: var(--apple-blue);
         }
-        
+
         .section {
             padding: 100px 22px;
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .section-title {
             font-size: 40px;
             font-weight: 600;
             margin-bottom: 60px;
             text-align: center;
         }
-        
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
         }
-        
+
         .project-card {
             background-color: var(--apple-light-gray);
             border-radius: 18px;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        
+
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .project-image {
             height: 200px;
             background-color: #ddd;
             background-size: cover;
             background-position: center;
         }
-        
+
         .project-content {
             padding: 25px;
         }
-        
+
         .project-title {
             font-size: 21px;
             font-weight: 500;
             margin-bottom: 10px;
         }
-        
+
         .project-desc {
             color: var(--apple-gray);
             margin-bottom: 15px;
         }
-        
+
         .project-link {
             color: var(--apple-blue);
             text-decoration: none;
@@ -278,57 +278,57 @@
             display: inline-flex;
             align-items: center;
         }
-        
+
         .project-link svg {
             margin-left: 5px;
             transition: transform 0.3s;
         }
-        
+
         .project-link:hover svg {
             transform: translateX(3px);
         }
-        
+
         .footer {
             background-color: var(--apple-light-gray);
             padding: 50px 22px;
             text-align: center;
         }
-        
+
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 30px;
             margin-bottom: 30px;
         }
-        
+
         .footer-link {
             color: var(--apple-gray);
             text-decoration: none;
             font-size: 14px;
         }
-        
+
         .footer-link:hover {
             color: var(--apple-blue);
         }
-        
+
         .copyright {
             color: var(--apple-gray);
             font-size: 12px;
         }
-        
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 48px;
             }
-            
+
             .hero p {
                 font-size: 21px;
             }
-            
+
             .section-title {
                 font-size: 32px;
             }
-            
+
             .projects-grid {
                 grid-template-columns: 1fr;
             }
@@ -495,212 +495,213 @@
             }
         }
 
+        /* 滑动动画 */
+        .slide-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .slide-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <span href="#" class="nav-logo">Infinitest · 极测无界</span>
-        <div class="nav-links">
-<!--            <div class="nav-dropdown">-->
-<!--                <a href="#" class="nav-link">指南</a>-->
-<!--                <div class="dropdown-menu">-->
-<!--                    <a href="./html/overview.html" class="dropdown-item">Overview</a>-->
-<!--                    <a href="./html/document-center.html" class="dropdown-item">文档中心</a>-->
-<!--                    <a href="./html/api.html" class="dropdown-item">API文档</a>-->
+<nav class="navbar">
+    <span href="#" class="nav-logo">Infinitest · 极测无界</span>
+    <div class="nav-links">
+        <!--            <div class="nav-dropdown">-->
+        <!--                <a href="#" class="nav-link">指南</a>-->
+        <!--                <div class="dropdown-menu">-->
+        <!--                    <a href="./html/overview.html" class="dropdown-item">Overview</a>-->
+        <!--                    <a href="./html/document-center.html" class="dropdown-item">文档中心</a>-->
+        <!--                    <a href="./html/api.html" class="dropdown-item">API文档</a>-->
 
-<!--                </div>-->
-<!--            </div>-->
-<!--            <a href="#projects" class="nav-link">项目</a>-->
-<!--            <a href="#about" class="nav-link">关于</a>-->
-            <a href="./html/document-center.html" class="dropdown-item">文档中心</a>
-        </div>
-    </nav>
-    
-
-
-
-
-    <section class="hero">
-        <div class="hero-slideshow">
-<!--            <div class="slide animated bounceInDown" style="background-image: url('./resources/images/home.jpg');"></div>-->
-            <div class="slide animated bounceInDown" data-src="./resources/images/buick-2.jpg"></div>
-<!--            <div class="slide animated bounceInDown" style="background-image: url('./resources/images/buick-1.jpg');"></div>-->
-<!--            <div class="slide" style="background-image: url('./resources/images/cadi-0.png');"></div>-->
-<!--            <div class="slide animated" style="background-image: url('./resources/images/buick-2.jpg');"></div>-->
-            <div class="slide" data-src="./resources/images/buick-3.jpg"></div>
-            <div class="slide" data-src="./resources/images/cadi-1.png"></div>
-            <div class="slide" data-src="./resources/images/buick-4.jpg"></div>
-<!--            <div class="slide" style="background-image: url('./resources/images/cadi-2.jpg');"></div>-->
-            <div class="slide" data-src="./resources/images/buick-5.jpg"></div>
-            <div class="slide" data-src="./resources/images/cadi-3.jpg"></div>
-            <div class="slide" data-src="./resources/images/buick-6.jpg"></div>
-            <div class="slide" data-src="./resources/images/cadi-4.jpg"></div>
-            <div class="slide" data-src="./resources/images/buick-7.jpg"></div>
-            <div class="slide" data-src="./resources/images/buick-3.jpg"></div>
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <a href="#projects" class="nav-link">项目</a>-->
+        <!--            <a href="#about" class="nav-link">关于</a>-->
+        <a href="./html/document-center.html" class="dropdown-item">文档中心</a>
+    </div>
+</nav>
 
 
 
 
 
-            <div class="overlay"></div>
-        </div>
+<section class="hero">
+    <div class="hero-slideshow">
+        <!--            <div class="slide animated bounceInDown" style="background-image: url('./resources/images/home.jpg');"></div>-->
+        <div class="slide animated bounceInDown" data-src="./resources/images/buick-2.jpg"></div>
+        <!--            <div class="slide animated bounceInDown" style="background-image: url('./resources/images/buick-1.jpg');"></div>-->
+        <!--            <div class="slide" style="background-image: url('./resources/images/cadi-0.png');"></div>-->
+        <!--            <div class="slide animated" style="background-image: url('./resources/images/buick-2.jpg');"></div>-->
+        <div class="slide" data-src="./resources/images/buick-3.jpg"></div>
+        <div class="slide" data-src="./resources/images/cadi-1.png"></div>
+        <div class="slide" data-src="./resources/images/buick-4.jpg"></div>
+        <!--            <div class="slide" style="background-image: url('./resources/images/cadi-2.jpg');"></div>-->
+        <div class="slide" data-src="./resources/images/buick-5.jpg"></div>
+        <div class="slide" data-src="./resources/images/cadi-3.jpg"></div>
+        <div class="slide" data-src="./resources/images/buick-6.jpg"></div>
+        <div class="slide" data-src="./resources/images/cadi-4.jpg"></div>
+        <div class="slide" data-src="./resources/images/buick-7.jpg"></div>
+        <div class="slide" data-src="./resources/images/buick-3.jpg"></div>
 
-        <!-- 添加字母动画容器 -->
-        <div class="motion-container" id="animationContainer"></div>
-        <div class="explosion-container" id="explosionContainer"></div>
-
-        <!-- 原有的标题和内容 - 在动画完成后显示 -->
-        <h1 class="animated zoomInDown" id="main-title" style="opacity: 0">Infinitest · 极测无界</h1>
-        <p class="animated zoomIn" id="main-subtitle" style="opacity: 0">Initialize your infotainment testing，开启你的智舱测试</p>
-        <div class="hero-links animated zoomIn" id="main-links" style="opacity: 0">
-<!--            <a href="#projects" class="hero-link">查看项目</a>-->
-        </div>
-
-        <button id="startAnimation" style="display: none;">开始动画</button>
-    </section>
 
 
 
 
-    <section id="projects" class="section">
-        <h2 class="section-title">精选项目</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80')"></div>
-                <div class="project-content">
-                    <h3 class="project-title">立刻使用</h3>
-                    <p class="project-desc">专业的VCU仿真工具，支持多种测试场景和数据分析功能。</p>
-                    <a href="./html/release-info.html" class="project-link">
-                        下载工具
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 11L11 1M11 1H1M11 1V11" stroke="#0066cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80')"></div>
-                <div class="project-content">
-                    <h3 class="project-title">产品特性</h3>
-                    <p class="project-desc">全面展示产品特性和技术规格的专业文档。</p>
-                    <a href="./html/overview.html" class="project-link">
-                        查看详情
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 11L11 1M11 1H1M11 1V11" stroke="#0066cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+        <div class="overlay"></div>
+    </div>
 
-            <div class="project-card">
-                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80')"></div>
-                <div class="project-content">
-                    <h3 class="project-title">创新工坊</h3>
-                    <p class="project-desc">精选开发工具集合，提高工作效率的利器。</p>
-                    <a href="./html/tool-set.html" class="project-link">
-                        工具研制中
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 11L11 1M11 1H1M11 1V11" stroke="#0066cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
+    <!-- 添加字母动画容器 -->
+    <div class="motion-container" id="animationContainer"></div>
+    <div class="explosion-container" id="explosionContainer"></div>
+
+    <!-- 原有的标题和内容 - 在动画完成后显示 -->
+    <h1 class="animated zoomInDown" id="main-title" style="opacity: 0">Infinitest · 极测无界</h1>
+    <p class="animated zoomIn" id="main-subtitle" style="opacity: 0">Initialize your infotainment testing，开启你的智舱测试</p>
+    <div class="hero-links animated zoomIn" id="main-links" style="opacity: 0">
+        <!--            <a href="#projects" class="hero-link">查看项目</a>-->
+    </div>
+
+    <button id="startAnimation" style="display: none;">开始动画</button>
+</section>
+
+
+
+
+<section id="projects" class="section">
+    <h2 class="section-title">精选项目</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="project-content">
+                <h3 class="project-title">立刻使用</h3>
+                <p class="project-desc">专业的VCU仿真工具，支持多种测试场景和数据分析功能。</p>
+                <a href="./html/release-info.html" class="project-link">
+                    下载工具
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 11L11 1M11 1H1M11 1V11" stroke="#0066cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
         </div>
-    </section>
-    
-    <section id="about" class="section" style="background-color: var(--apple-light-gray);">
-        <h2 class="section-title">关于我们</h2>
-        <div style="max-width: 700px; margin: 0 auto; text-align: left;text-indent: 2em;">
-            <p style="font-size: 21px; color: var(--apple-gray); margin-bottom: 30px;">
-                我们是一支来自智能座舱软件测试领域的精英团队，致力于打造新一代智能汽车电子架构的车联仿真与自动化测试解决方案。凭借深厚的技术积累与创新精神，我们持续推动汽车电子测试领域的智能化转型。
-            </p>
-            <p style="font-size: 21px; color: var(--apple-gray);">
-                核心技术栈涵盖 JavaScript、Python、Node.js 等现代开发技术，专注于构建高效、可靠的自动化测试工具链。我们以提升测试效率、保障产品质量为己任，为智能汽车电子系统的研发提供强有力的技术支撑。
-            </p>
-        </div>
 
-        <!-- 新增贡献者信息部分 -->
-        <div class="contributors-section" style="margin-top: 150px;">
-            <h3 style="text-align: center; font-size: 28px; margin-bottom: 40px; color: var(--apple-black);">项目贡献者</h3>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                <!-- 贡献者卡片 -->
-                <div class="contributor-card" style="text-align: center; width: 110px;">
-                    <img src="./resources/avatar/lizhao.jpg" alt="李昭" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
-                    <h4 style="font-size: 12.8px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 0s;">李昭</h4>
-                    <!--                    <p style="font-size: 11.2px; color: var(&#45;&#45;apple-gray);">测试开发</p>-->
-                    <button onclick="showEmail('Zhao2_Li@patac.com.cn')" style="font-size: 9.6px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
-                </div>
-
-                <div class="contributor-card" style="text-align: center; width: 110px;">
-                    <img src="./resources/avatar/chengjie.jpg" alt="程劼" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
-                    <h4 style="font-size: 12.8px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 0s;">程劼</h4>
-<!--                    <p style="font-size: 11.2px; color: var(&#45;&#45;apple-gray);">测试开发</p>-->
-                    <button onclick="showEmail('Jie2_cheng@patac.com.cn')" style="font-size: 9.6px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
-                </div>
-                <div class="contributor-card" style="text-align: center; width: 110px;">
-                    <img src="./resources/avatar/chencheng.jpg" alt="陈成" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
-                    <h4 style="font-size: 12.8px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 0.4s;">陈成</h4>
-<!--                    <p style="font-size: 11.2px; color: var(&#45;&#45;apple-gray);">测试开发</p>-->
-                    <button onclick="showEmail('cheng13_chen@patac.com.cn')" style="font-size: 9.6px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
-                </div>
-                <div class="contributor-card" style="text-align: center; width: 110px;">
-                    <img src="./resources/avatar/sunjingchong.jpg" alt="孙景翀" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
-                    <h4 style="font-size: 12.8px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 0.8s;">孙景翀</h4>
-<!--                    <p style="font-size: 11.2px; color: var(&#45;&#45;apple-gray);">测试开发</p>-->
-                    <button onclick="showEmail('jingchong1_sun@patac.com.cn')" style="font-size: 9.6px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
-                </div>
-                <div class="contributor-card" style="text-align: center; width: 110px;">
-                    <img src="./resources/avatar/miaohaiyang.jpg" alt="苗海洋" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
-                    <h4 style="font-size: 12.8px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 1.2s;">苗海洋</h4>
-<!--                    <p style="font-size: 11.2px; color: var(&#45;&#45;apple-gray);">测试开发</p>-->
-                    <button onclick="showEmail('haiyang_miao@patac.com.cn')" style="font-size: 9.6px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
-                </div>
-                <div class="contributor-card" style="text-align: center; width: 110px;">
-                    <img src="./resources/avatar/sunzhiwei.jpg" alt="孙智伟" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
-                    <h4 style="font-size: 12.8px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 1.6s;">孙智伟</h4>
-<!--                    <p style="font-size: 11.2px; color: var(&#45;&#45;apple-gray);">测试开发</p>-->
-                    <button onclick="showEmail('zhiwei5_sun@patac.com.cn')" style="font-size: 9.6px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
-                </div>
-                <div class="contributor-card" style="text-align: center; width: 110px;">
-                    <img src="./resources/avatar/liyunsong.jpg" alt="李云松" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
-                    <h4 style="font-size: 12.8px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 2.0s;">李云松</h4>
-<!--                    <p style="font-size: 11.2px; color: var(&#45;&#45;apple-gray);">测试开发</p>-->
-                    <button onclick="showEmail('Li_Yunsong@patac.com.cn')" style="font-size: 9.6px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
-                </div>
-
-<!--                <div class="contributor-card" style="text-align: center; width: 110px;">-->
-<!--                    <img src="./resources/avatar/liyunsong.jpg" alt="李云松" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(&#45;&#45;apple-blue);">-->
-<!--                    <h4 style="font-size: 12.8px; margin: 8px 0 4px; color: var(&#45;&#45;apple-black); animation: glow 3s infinite alternate;animation-delay: 2.0s;">XXXX</h4>-->
-<!--&lt;!&ndash;                    <p style="font-size: 11.2px; color: var(&#45;&#45;apple-gray);">测试开发</p>&ndash;&gt;-->
-<!--                    <button onclick="showEmail('yunsong_li@patac.com.cn')" style="font-size: 9.6px; color: var(&#45;&#45;apple-blue); background: none; border: none; cursor: pointer;">联系</button>-->
-<!--                </div>-->
-
+        <div class="project-card">
+            <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="project-content">
+                <h3 class="project-title">产品特性</h3>
+                <p class="project-desc">全面展示产品特性和技术规格的专业文档。</p>
+                <a href="./html/overview.html" class="project-link">
+                    查看详情
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 11L11 1M11 1H1M11 1V11" stroke="#0066cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
         </div>
-    </section>
 
-    <section id="contact" class="section">
-        <h2 class="section-title"></h2>
-    </section>
+        <div class="project-card">
+            <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="project-content">
+                <h3 class="project-title">创新工坊</h3>
+                <p class="project-desc">精选开发工具集合，提高工作效率的利器。</p>
+                <a href="./html/tool-set.html" class="project-link">
+                    工具研制中
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 11L11 1M11 1H1M11 1V11" stroke="#0066cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section" style="background-color: var(--apple-light-gray);">
+    <h2 class="section-title">关于我们</h2>
+    <div style="max-width: 700px; margin: 0 auto; text-align: left;text-indent: 2em;">
+        <p style="font-size: 21px; color: var(--apple-gray); margin-bottom: 30px;">
+            我们是一支来自智能座舱软件测试领域的精英团队，致力于打造新一代智能汽车电子架构的车联仿真与自动化测试解决方案。凭借深厚的技术积累与创新精神，我们持续推动汽车电子测试领域的智能化转型。
+        </p>
+        <p style="font-size: 21px; color: var(--apple-gray);">
+            核心技术栈涵盖 JavaScript、Python、Node.js 等现代开发技术，专注于构建高效、可靠的自动化测试工具链。我们以提升测试效率、保障产品质量为己任，为智能汽车电子系统的研发提供强有力的技术支撑。
+        </p>
+    </div>
+
+    <!-- 新增贡献者信息部分 -->
+    <div class="contributors-section slide-in" style="margin-top: 150px;">
+        <h3 style="text-align: center; font-size: 28px; margin-bottom: 40px; color: var(--apple-black);">项目贡献者</h3>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <!-- 贡献者卡片 -->
+            <div class="contributor-card" style="text-align: center; width: 90px; margin-top: 0px;">
+                <img src="./resources/avatar/lizhao.jpg" alt="李昭" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
+                <h4 style="font-size: 12px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 0s;">李昭</h4>
+                <button onclick="showEmail('Zhao2_Li@patac.com.cn')" style="font-size: 9px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
+            </div>
+
+            <div class="contributor-card" style="text-align: center; width: 90px; margin-top: 20px;">
+                <img src="./resources/avatar/chengjie.jpg" alt="程劼" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
+                <h4 style="font-size: 12px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 0s;">程劼</h4>
+                <button onclick="showEmail('Jie2_cheng@patac.com.cn')" style="font-size: 9px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
+            </div>
+
+            <div class="contributor-card" style="text-align: center; width: 90px; margin-top: 40px;">
+                <img src="./resources/avatar/chencheng.jpg" alt="陈成" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
+                <h4 style="font-size: 12px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 0.4s;">陈成</h4>
+                <button onclick="showEmail('cheng13_chen@patac.com.cn')" style="font-size: 9px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
+            </div>
+
+            <div class="contributor-card" style="text-align: center; width: 90px; margin-top: 60px;">
+                <img src="./resources/avatar/sunjingchong.jpg" alt="孙景翀" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
+                <h4 style="font-size: 12px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 0.8s;">孙景翀</h4>
+                <button onclick="showEmail('jingchong1_sun@patac.com.cn')" style="font-size: 9px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
+            </div>
+
+            <div class="contributor-card" style="text-align: center; width: 90px; margin-top: 40px;">
+                <img src="./resources/avatar/miaohaiyang.jpg" alt="苗海洋" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
+                <h4 style="font-size: 12px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 1.2s;">苗海洋</h4>
+                <button onclick="showEmail('haiyang_miao@patac.com.cn')" style="font-size: 9px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
+            </div>
+
+            <div class="contributor-card" style="text-align: center; width: 90px; margin-top: 20px;">
+                <img src="./resources/avatar/sunzhiwei.jpg" alt="孙智伟" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
+                <h4 style="font-size: 12px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 1.6s;">孙智伟</h4>
+                <button onclick="showEmail('zhiwei5_sun@patac.com.cn')" style="font-size: 9px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
+            </div>
+
+            <div class="contributor-card" style="text-align: center; width: 90px; margin-top: 0px;">
+                <img src="./resources/avatar/liyunsong.jpg" alt="李云松" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--apple-blue);">
+                <h4 style="font-size: 12px; margin: 8px 0 4px; color: var(--apple-black); animation: glow 3s infinite alternate;animation-delay: 2.0s;">李云松</h4>
+                <button onclick="showEmail('Li_Yunsong@patac.com.cn')" style="font-size: 9px; color: var(--apple-blue); background: none; border: none; cursor: pointer;">联系</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2 class="section-title"></h2>
+</section>
 <!--    <div class="visit"style="position: fixed; top:0; bottom: 0;">访问量: <span id="finicount_views"></span> </div>-->
 <!--    <span id="finicount_views" style="position: fixed; top:0; bottom: 0;"></span>-->
 
-    <div class="visitiscontainer">
-        <div class="visitsdiv" style="position: fixed; left:15px; bottom: 10px;font-size: 0.8rem;color: gray">
-            <span id="finicount_text">累计访问量:</span><span id="finicount_views"></span>
-        </div>
-<!--        <div class="visitstotaldiv">-->
-<!--            <span id="finicount_text">所有站点总计数:</span><span id="total_views"></span>-->
-<!--        </div>-->
+<div class="visitiscontainer">
+    <div class="visitsdiv" style="position: fixed; left:15px; bottom: 10px;font-size: 0.8rem;color: gray">
+        <span id="finicount_text">累计访问量:</span><span id="finicount_views"></span>
     </div>
-    </div>
+    <!--        <div class="visitstotaldiv">-->
+    <!--            <span id="finicount_text">所有站点总计数:</span><span id="total_views"></span>-->
+    <!--        </div>-->
+</div>
+</div>
 
 
 
-    <footer class="footer">
-        <p class="copyright">© - 2025 PATAC. All Rights Reserved.</p>
-    </footer>
+<footer class="footer">
+    <p class="copyright">© - 2025 PATAC. All Rights Reserved.</p>
+</footer>
 </body>
 <!--<script src="./js/jquery.js" type="text/javascript"></script>-->
 <!--<script src="./js/vue.min.js" type="text/javascript"></script>-->
@@ -1149,7 +1150,7 @@
     function showEmail(email) {
         // 使用alert显示
         alert(`联系邮箱：${email}`);
-        
+
         // 或者使用更优雅的Toast提示（需要先添加Toast样式）
         // showToast(`联系邮箱：${email}`);
     }
@@ -1169,7 +1170,7 @@
         toast.style.zIndex = '1000';
         toast.textContent = message;
         document.body.appendChild(toast);
-        
+
         setTimeout(() => {
             document.body.removeChild(toast);
         }, 3000);
@@ -1186,6 +1187,22 @@
     // 如果需要，你可以在页面加载时手动添加一个历史记录条目
     // 这样在用户点击返回按钮时，popstate事件会被触发
     history.pushState(null, document.title, location.href);
+
+    // 滑动动画逻辑
+    const slideInElements = document.querySelectorAll('.slide-in');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+    slideInElements.forEach(element => {
+        observer.observe(element);
+    });
 
 </script>
 </script>

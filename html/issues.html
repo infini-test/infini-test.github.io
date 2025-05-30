@@ -330,6 +330,7 @@
     <h2>问题导航</h2>
     <ul>
       <li><a href="#如何安装">如何部署项目？</a></li>
+      <li><a href="#配置python解释器路径时报错">配置python解释器路径时报错？</a></li>
       <li><a href="#如何更新到最新版本">如何更新到最新版本？</a></li>
       <li><a href="#解决ADB连接问题">解决ADB连接问题？</a></li>
       <li><a href="#证书过期怎么办">证书过期怎么办？</a></li>
@@ -346,7 +347,17 @@
             </div>
           </li>
 
+
+          <li id="配置python解释器路径时报错" class="faq-item">
+            <a href="#" class="faq-question">Q: 配置python解释器路径时报错？</a>
+            <div class="answer">
+              <p>1.请在配置python解释器路径之前，将 D:\auto_test\automation_lib\python-3.12.9-embed-amd64\sitecustomize.py 重命名为:sitecustomize.py.bk;<br/>
+                2.在PyCharm中 File > Settings > Python Intepreter 中设置已存在的解释器路径: D:\auto_test\automation_lib\python-3.12.9-embed-amd64\python.exe;<br/>
+                3.最后将 D:\auto_test\automation_lib\python-3.12.9-embed-amd64\sitecustomize.py.bk 恢复原名:sitecustomize.py;
+              </p>
+            </div>
           </li>
+
           <li id="如何更新到最新版本" class="faq-item">
             <a href="#" class="faq-question">Q: 如何更新到最新版本？</a>
             <div class="answer">
