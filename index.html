@@ -713,7 +713,7 @@
     $(document).ready(function() {
         // 定义后端API的URL
         // const apiUrl = 'http://localhost:9000/infinitest_webpage_visit_count/add'; // 替换为实际的后端API地址
-        const apiUrl = 'http://121.199.10.148:9001/api/infinitest_webpage_visit_count/add'; // 替换为实际的后端API地址
+        const apiUrl = 'http://121.199.10.148:9001/infinitest_webpage_visit_count/add'; // 替换为实际的后端API地址
         $.post(apiUrl, function(response) {
             console.log('访问计数已提交:', response);
         }).fail(function(error) {
