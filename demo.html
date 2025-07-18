@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>逐帧滑动效果</title>
+  <style>
+    .image-slider {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .image-slider img {
+      display: inline-block;
+      width: 100%;
+      animation: slide 8s steps(4, end) infinite;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-400%);
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="image-slider">
+<!--  <img src="image1.jpg" alt="Image 1">-->
+<!--  <img src="image2.jpg" alt="Image 2">-->
+<!--  <img src="image3.jpg" alt="Image 3">-->
+<!--  <img src="image4.jpg" alt="Image 4">-->
+
+  <img class="slide" src="./resources/images/buick-5.jpg"></img>
+  <img class="slide" src="./resources/images/cadi-3.jpg"></img>
+  <img class="slide" src="./resources/images/buick-6.jpg"></img>
+  <img class="slide" src="./resources/images/cadi-4.jpg"></img>
+  <img class="slide" src="./resources/images/buick-7.jpg"></img>
+  <img class="slide" src="./resources/images/buick-3.jpg"></img>
+
+
+</div>
+</body>
+</html>
